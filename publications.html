@@ -1,22 +1,682 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Publications | Vivek Kumar</title><style>
-:root{--sky:#dff3ff;--sky2:#c9edff;--sky3:#a9def8;--ink:#111;--muted:#555;--line:#9fc6d9;--white:#fff;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Georgia,'Times New Roman',serif}a{color:#184fbe;text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(var(--max),calc(100% - 50px));margin:auto}
-/* top nav */
-.topbar{height:68px;background:var(--sky2);border-bottom:2px solid #fff;display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between;gap:32px}.brand{font-family:Arial,Helvetica,sans-serif;font-size:14px;background:#2f76c7;color:#fff;padding:4px 7px}.menu{display:flex;align-items:center;gap:24px;font-family:Arial,Helvetica,sans-serif;font-size:13px}.menu a{color:#111}.menu a.active{font-weight:700}.menu .exp{position:relative}.submenu{display:none;position:absolute;top:20px;left:-14px;background:#fff;border:1px solid var(--line);min-width:190px;padding:7px;z-index:20;box-shadow:0 8px 20px rgba(0,0,0,.08)}.submenu a{display:block;padding:7px 8px}.exp:hover .submenu{display:block}
-/* home hero like reference */
-.name-banner{height:220px;background:linear-gradient(135deg,var(--sky3) 0 35%,var(--sky2) 35% 63%,var(--sky) 63% 100%);position:relative;overflow:hidden}.name-banner:after{content:'';position:absolute;width:700px;height:250px;right:-100px;top:-110px;border:45px solid rgba(255,255,255,.28);transform:rotate(-14deg)}.name-grid{height:100%;display:grid;grid-template-columns:430px 1fr;align-items:center}.name-grid h1{grid-column:2;font-size:58px;font-weight:400;margin:0;color:#183244;position:relative;z-index:2}
-.profile-block{position:relative;background:#fff;min-height:350px}.profile-grid{display:grid;grid-template-columns:430px 1fr;gap:70px}.photo-box{width:370px;height:365px;margin-top:-128px;background:#e9f6fc;border:1px solid #b7d5e3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.photo-box:before{content:'';width:155px;height:155px;border-radius:50%;background:#fff;position:absolute;top:48px;left:107px;border:1px solid #bfd9e4}.photo-box:after{content:'';width:260px;height:220px;border-radius:50% 50% 0 0;background:#fff;position:absolute;bottom:-75px;left:55px;border:1px solid #bfd9e4}.photo-label{position:relative;z-index:3;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#527182;margin-top:250px}.bio{padding:36px 0 55px}.bio h2{font-size:31px;font-weight:400;margin:0 0 14px}.bio .sub{font-size:23px;line-height:1.55;margin-bottom:36px}.bio .aff{font-size:17px;line-height:1.65;margin-bottom:24px}.scholar{font-size:17px;display:inline-flex;align-items:center;gap:10px}.scholar .cap{font-size:28px;color:#4e8ee8}
-/* supervisor band */
-.supervisor{background:linear-gradient(150deg,var(--sky2),var(--sky3));min-height:285px;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden}.supervisor:after{content:'';position:absolute;width:800px;height:300px;left:35%;top:40px;border-radius:50%;border:70px solid rgba(255,255,255,.22);transform:rotate(12deg)}.supervisor .inner{position:relative;z-index:2}.supervisor .label{font-size:31px;margin-bottom:38px}.supervisor h2{font-size:36px;font-weight:400;margin:0 0 12px}.supervisor p{font-size:17px;margin:0}.about-btn{display:inline-block;margin-top:35px;background:#376479;color:#fff;padding:12px 48px;font-family:Arial,Helvetica,sans-serif;font-size:13px}.about-btn:hover{text-decoration:none;background:#2b556b}
-/* research strip */
-.research-area{padding:95px 0 100px;background:#fff}.research-area h2{font-size:48px;font-weight:400;margin:0 0 80px}.research-grid{display:grid;grid-template-columns:repeat(5,1fr)}.research-item{min-height:105px;border-left:1px solid #888;display:flex;align-items:center;justify-content:center;text-align:center;font-size:26px;line-height:1.4;padding:10px 25px}.research-item:last-child{border-right:1px solid #888}
-/* contact band */
-.contact-band{background:linear-gradient(125deg,#b9e6fb,#dff3ff);padding:50px 0 62px;position:relative;overflow:hidden}.contact-band:after{content:'';position:absolute;inset:0;background:linear-gradient(30deg,transparent 0 45%,rgba(255,255,255,.35) 45% 53%,transparent 53%);pointer-events:none}.contact-band h2{text-align:center;font-size:42px;font-weight:400;margin:0 0 45px}.contact-info{position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;font-family:Georgia,'Times New Roman',serif;font-size:14px}.contact-info .line{margin:18px 0}.ico{display:inline-block;width:45px;text-align:center;font-size:20px}.footer{background:#fff;padding:14px 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;text-align:center;color:#666}
-/* inner pages */
-.page-hero{background:linear-gradient(135deg,var(--sky2),var(--sky));padding:65px 0}.page-hero h1{font-size:52px;font-weight:400;margin:0}.page{padding:65px 0 90px}.page h2{font-size:30px;font-weight:400;margin:35px 0 12px}.page p,.page li{font-size:17px;line-height:1.75}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.card{padding:28px;border:1px solid #b8d5e3;background:#f8fdff}.pub{padding:23px 0;border-top:1px solid #b8d5e3}.pub h3{font-size:22px;font-weight:400;margin:0 0 7px}.small{font-family:Arial,Helvetica,sans-serif;font-size:13px!important;color:#555}.cvbtn{display:inline-block;padding:12px 22px;background:#376479;color:#fff;font-family:Arial,Helvetica,sans-serif}
-@media(max-width:900px){.menu{gap:10px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}.name-grid,.profile-grid{grid-template-columns:1fr}.name-grid h1{grid-column:1;font-size:45px;text-align:center}.name-banner{height:170px}.photo-box{margin:-70px auto 0}.bio{text-align:center}.research-grid{grid-template-columns:1fr 1fr}.research-item{border-right:1px solid #888;border-bottom:1px solid #aaa}.contact-info{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
-@media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 28px))}.topbar{height:auto;padding:12px 0}.nav{align-items:flex-start}.menu{display:grid;grid-template-columns:repeat(3,auto);gap:8px 12px}.photo-box{width:300px;height:330px}.research-grid{grid-template-columns:1fr}.research-item{border-right:1px solid #888}.research-area h2{font-size:38px}.name-grid h1{font-size:39px}.bio .sub{font-size:19px}.page-hero h1{font-size:42px}}
-</style></head><body><header class="topbar"><div class="wrap nav"><a class="brand" href="index.html">Vivek Kumar</a><nav class="menu">
-<a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a>
-<div class="exp"><a href="experience.html">Experiences</a><div class="submenu"><a href="experience.html">Research Experience</a><a href="internship-project.html">Internship and Project</a><a href="teaching-experience.html">Teaching Experience</a></div></div>
-<a href="cv.html">CV</a><a href="photography.html">Photography</a><a href="contact.html">Contact</a></nav></div></header><section class="page-hero"><div class="wrap"><h1>Publications</h1></div></section><main class="page"><div class="wrap"><div class="pub"><h3>New FFIMMC Control Design for the Detection and Mitigation of Hybrid Cyber Threats</h3><p class="small">IEEE Transactions on Industrial Electronics, 2026.</p></div><div class="pub"><h3>Frequency Relocated PIDAFF Control Scheme for LFC in Microgrid Amid Multiple Cyber Threats</h3><p class="small">IEEE Transactions on Industry Applications, 2026.</p></div><div class="pub"><h3>New Approach of Switching Based Modified Nonlinear ADRC Strategy for Detection and Mitigation of Cyber Threats</h3><p class="small">IEEE Transactions on Industry Applications, 2026.</p></div><div class="pub"><h3>New approach of series-PID controller design based on modern control theory: Simulations and real-time validation</h3><p class="small">IFAC Journal of Systems and Control, 2025.</p></div></div></main><footer class="footer">© Vivek Kumar · Hosted free with GitHub Pages</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Publications | Vivek Kumar</title>
+
+<style>
+:root{
+  --sky:#dff3ff;
+  --sky2:#c9edff;
+  --sky3:#a9def8;
+  --ink:#172b43;
+  --muted:#5a6a78;
+  --line:#b8d5e3;
+  --blue:#2f76c7;
+  --deep:#173a63;
+  --white:#fff;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+}
+a{color:#184fbe;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(var(--max),calc(100% - 50px));margin:auto}
+
+/* NAVIGATION */
+.topbar{
+  height:68px;
+  background:var(--sky2);
+  border-bottom:2px solid #fff;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:50;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+}
+.brand{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  background:var(--blue);
+  color:#fff;
+  padding:5px 8px;
+}
+.menu{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+}
+.menu a{color:#111;position:relative}
+.menu a.active{font-weight:700;color:#1d5c9e}
+.menu a.active:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-10px;
+  height:2px;
+  background:var(--blue);
+}
+.exp{position:relative}
+.submenu{
+  display:none;
+  position:absolute;
+  top:20px;
+  left:-14px;
+  background:#fff;
+  border:1px solid var(--line);
+  min-width:190px;
+  padding:7px;
+  z-index:60;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.submenu a{display:block;padding:7px 8px}
+.exp:hover .submenu{display:block}
+
+/* HERO */
+.page-hero{
+  background:
+    linear-gradient(135deg,rgba(169,222,248,.98),rgba(223,243,255,.98)),
+    radial-gradient(circle at 78% 25%,rgba(255,255,255,.75),transparent 32%);
+  padding:72px 0 60px;
+  position:relative;
+  overflow:hidden;
+}
+.page-hero:after{
+  content:"";
+  position:absolute;
+  width:650px;
+  height:220px;
+  right:-100px;
+  top:-75px;
+  border:42px solid rgba(255,255,255,.28);
+  border-radius:50%;
+  transform:rotate(-10deg);
+}
+.hero-row{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:25px;
+}
+.page-hero h1{
+  font-size:54px;
+  font-weight:400;
+  margin:0 0 8px;
+  color:#183244;
+}
+.page-hero p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  color:#38536a;
+}
+.scholar-btn{
+  display:inline-block;
+  background:#2f76c7;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  padding:11px 18px;
+  border-radius:4px;
+  white-space:nowrap;
+}
+.scholar-btn:hover{
+  text-decoration:none;
+  background:#245f9e;
+}
+
+/* SECTION NAV */
+.section-nav{
+  background:#f8fdff;
+  border-bottom:1px solid #d8e9f4;
+  position:sticky;
+  top:0;
+  z-index:30;
+}
+.section-nav .wrap{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+.section-nav a{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  color:#244d72;
+  border:1px solid #c4ddeb;
+  background:#fff;
+  padding:8px 13px;
+  border-radius:18px;
+}
+.section-nav a:hover{
+  background:#eaf7ff;
+  text-decoration:none;
+}
+
+/* CONTENT */
+.page{padding:56px 0 85px}
+.pub-section{scroll-margin-top:75px;margin-bottom:68px}
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 25px;
+}
+.section-title h2{
+  font-family:"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+  font-size:36px;
+  font-weight:600;
+  font-style:italic;
+  letter-spacing:.4px;
+  color:#173a63;
+  margin:0;
+  text-shadow:0 1px 0 rgba(255,255,255,.75);
+}
+.count{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color:#36688e;
+  background:#e9f7ff;
+  border:1px solid #c7e4f4;
+  padding:5px 9px;
+  border-radius:12px;
+}
+.section-rule{
+  height:1px;
+  background:linear-gradient(to right,#8ebbd4,transparent);
+  margin-bottom:7px;
+}
+
+/* PUBLICATION ITEM */
+.pub{
+  display:grid;
+  grid-template-columns:52px 1fr;
+  gap:18px;
+  padding:24px 0;
+  border-bottom:1px solid #dbeaf3;
+}
+.pub:last-child{border-bottom:none}
+.num{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#e7f6ff;
+  border:1px solid #b9dcec;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  color:#2f6f9e;
+  margin-top:2px;
+}
+.pub h3{
+  font-size:20px;
+  line-height:1.45;
+  font-weight:600;
+  color:#152f50;
+  margin:0 0 7px;
+}
+.authors{
+  font-size:15px;
+  line-height:1.6;
+  margin:0 0 5px;
+  color:#263d54;
+}
+.authors strong{color:#0c4d87}
+.venue{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  line-height:1.55;
+  color:#5a6977;
+  margin:0 0 8px;
+}
+.links{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.links a{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  border:1px solid #b8d8ea;
+  background:#f7fcff;
+  color:#236aa3;
+  padding:5px 9px;
+  border-radius:3px;
+}
+.links a:hover{
+  background:#e9f7ff;
+  text-decoration:none;
+}
+.badge{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  color:#316a91;
+  background:#edf9ff;
+  border:1px solid #c5e4f3;
+  padding:4px 7px;
+  border-radius:3px;
+  margin-left:7px;
+  vertical-align:middle;
+}
+
+/* EMPTY BOOK SECTION */
+.empty-box{
+  border:1px solid #cfe4ef;
+  background:#f8fdff;
+  padding:24px 26px;
+  color:#526779;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* FOOTER */
+.footer{
+  background:#f6fbff;
+  border-top:1px solid #dceaf3;
+  padding:19px 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  text-align:center;
+  color:#667784;
+}
+
+@media(max-width:900px){
+  .menu{gap:10px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}
+  .hero-row{align-items:flex-start;flex-direction:column}
+  .page-hero h1{font-size:44px}
+}
+@media(max-width:600px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  .topbar{height:auto;padding:12px 0}
+  .nav{align-items:flex-start;flex-direction:column}
+  .menu{display:grid;grid-template-columns:repeat(3,auto);gap:8px 12px}
+  .page-hero{padding:50px 0 45px}
+  .page-hero h1{font-size:39px}
+  .section-title h2{font-size:28px}
+  .pub{grid-template-columns:40px 1fr;gap:12px}
+  .num{width:32px;height:32px}
+  .pub h3{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Vivek Kumar</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a class="active" href="publications.html">Publications</a>
+      <div class="exp">
+        <a href="experience.html">Experiences</a>
+        <div class="submenu">
+          <a href="experience.html">Research Experience</a>
+          <a href="internship-project.html">Internship and Project</a>
+          <a href="teaching-experience.html">Teaching Experience</a>
+        </div>
+      </div>
+      <a href="cv.html">CV</a>
+      <a href="photography.html">Photography</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap hero-row">
+    <div>
+      <h1>Publications</h1>
+      <p>Journal articles, conference papers, and book chapters.</p>
+    </div>
+    <a class="scholar-btn"
+       href="https://scholar.google.com/citations?hl=en&user=iyLbGngAAAAJ&view_op=list_works&sortby=pubdate"
+       target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+  </div>
+</section>
+
+<div class="section-nav">
+  <div class="wrap">
+    <a href="#journals">Journals / Transactions</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#books">Book Chapters</a>
+  </div>
+</div>
+
+<main class="page">
+<div class="wrap">
+
+<!-- =========================================================
+     1. JOURNALS / TRANSACTIONS
+========================================================= -->
+<section id="journals" class="pub-section">
+  <div class="section-title">
+    <h2>1. Journals / Transactions</h2>
+    <span class="count">12 entries</span>
+  </div>
+  <div class="section-rule"></div>
+
+  <article class="pub">
+    <div class="num">J1</div>
+    <div>
+      <h3>New FFIMMC Control Design for the Detection and Mitigation of Hybrid Cyber Threats</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">IEEE Transactions on Industrial Electronics, Vol. 73, No. 8, pp. 12263–12275, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/TIE.2026.3670271" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J2</div>
+    <div>
+      <h3>Frequency Relocated PIDAFF Control Scheme for LFC in Microgrid Amid Multiple Cyber Threats</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote, G. Lloyds Raja, Suvra Pattanayak</p>
+      <p class="venue">IEEE Transactions on Industry Applications, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/TIA.2026.3700073" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J3</div>
+    <div>
+      <h3>New Approach of Switching Based Modified Nonlinear ADRC Strategy for Detection and Mitigation of Cyber Threats</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">IEEE Transactions on Industry Applications, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/TIA.2026.3677321" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J4</div>
+    <div>
+      <h3>Robust Fractional-Order Control Design for LFC in Interconnected Power Systems with RESs</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">International Journal of Systems Science, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1080/00207721.2026.2710896" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J5</div>
+    <div>
+      <h3>Performance and Robustness Analysis of Optimal T2FID+PD Controller for Frequency Regulation in a Triple-Area Deregulated Power System</h3>
+      <p class="authors">Nisha Kumari, <strong>Vivek Kumar</strong>, Pulakraj Aryan, G. Lloyds Raja, Yogesh V. Hote</p>
+      <p class="venue">IEEE Access, Vol. 14, pp. 71475–71493, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/ACCESS.2026.3692287" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J6</div>
+    <div>
+      <h3>Cyber-Attack Resilient Load Frequency Control of Multi-Area Power Systems Using Nonlinear Active Disturbance Rejection Control <span class="badge">Accepted</span></h3>
+      <p class="authors">Suvra Pattanayak, Yogesh V. Hote, Sateesh K. Peddoju, <strong>Vivek Kumar</strong></p>
+      <p class="venue">IEEE Transactions on Industry Applications, accepted in 2026.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J7</div>
+    <div>
+      <h3>Robust Shifted-IMC Based Modified Decoupled Smith Predictor for Delay-Dominant Integrating-Type Chemical Processes</h3>
+      <p class="authors">Pulakraj Aryan, <strong>Vivek Kumar</strong>, G. Lloyds Raja, Thanga Raj Chelliah, Yogesh V. Hote</p>
+      <p class="venue">International Journal of Systems Science, Vol. 57, No. 3, pp. 740–758, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1080/00207721.2025.2510313" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J8</div>
+    <div>
+      <h3>Robust IMC-PID Control Strategies for Voltage Regulation of Non-minimum Phase DC–DC Boost Converter</h3>
+      <p class="authors">Vipul Mahajan, <strong>Vivek Kumar</strong>, Uday Bhaskar Babu Gara</p>
+      <p class="venue">International Journal of Control, Automation, and Systems, Vol. 24, No. 6, pp. 1319–1337, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1007/s12555-026-00102-w" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iyLbGngAAAAJ&sortby=pubdate&citation_for_view=iyLbGngAAAAJ:ZeXyd9-uunAC" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J9</div>
+    <div>
+      <h3>Robust Smith Predictor-Based Fractional IMC-PID Controller Design for Improved Stable SOPTD Process Performance</h3>
+      <p class="authors">Aditya Apparasu, Seshagiri Rao Ambati, <strong>Vivek Kumar</strong>, Uday Bhaskar Babu Gara</p>
+      <p class="venue">Journal of Umm Al-Qura University for Engineering and Architecture, Vol. 17, pp. 428–452, 2026.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1007/s43995-025-00241-x" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iyLbGngAAAAJ&sortby=pubdate&citation_for_view=iyLbGngAAAAJ:UebtZRa9Y70C" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">J10</div>
+    <div>
+      <h3>New Approach of Series-PID Controller Design Based on Modern Control Theory: Simulations and Real-Time Validation</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">IFAC Journal of Systems and Control, Vol. 31, Article 100295, 2025.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1016/j.ifacsc.2025.100295" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================================
+     2. CONFERENCES
+========================================================= -->
+<section id="conferences" class="pub-section">
+  <div class="section-title">
+    <h2>2. Conferences</h2>
+    <span class="count">10 entries</span>
+  </div>
+  <div class="section-rule"></div>
+
+  <article class="pub">
+    <div class="num">C1</div>
+    <div>
+      <h3>Fractional IMC-PIDA Control Technique for Mitigation of Time Delay Attack in Power System</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote, Suvra Pattanayak</p>
+      <p class="venue">2024 IEEE International Conference on Power Electronics, Drives and Energy Systems (PEDES), Mangalore, India, 2024.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/PEDES61459.2024.10961025" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C2</div>
+    <div>
+      <h3>Enhancing Load Frequency Control with Non-Linear ADRC for Cyber-Attacks Mitigation</h3>
+      <p class="authors">Suvra Pattanayak, Yogesh V. Hote, Sateesh K. Peddoju, <strong>Vivek Kumar</strong></p>
+      <p class="venue">2024 IEEE International Conference on Power Electronics, Drives and Energy Systems (PEDES), Mangalore, India, 2024.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C3</div>
+    <div>
+      <h3>Design of Switching Based INADRC Control for Mitigation of Time Delay Cyber-Attack (TDCAs) in Hybrid Microgrid System</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Kunal Panwar, Yogesh V. Hote</p>
+      <p class="venue">2024 IEEE Industry Applications Society Annual Meeting (IAS), Phoenix, Arizona, USA, pp. 1–6, 2024.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C4</div>
+    <div>
+      <h3>Multi-Model Based Internal Model Control Design for LFC with Uncertain Time-Delay</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Sugata Sarkar, Yogesh V. Hote</p>
+      <p class="venue">2024 IEEE Conference on Control Technology and Applications (CCTA), Newcastle upon Tyne, United Kingdom, pp. 153–158, 2024.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C5</div>
+    <div>
+      <h3>Study of Cyber Threats and its Challenges in LFC and its Mitigation via GDA Based PID Controller</h3>
+      <p class="authors">Baddepudi Johnbabu, Suvra Pattanayak, <strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">2024 IEEE Conference on Control Technology and Applications (CCTA), Newcastle upon Tyne, United Kingdom, pp. 159–164, 2024.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C6</div>
+    <div>
+      <h3>A Multiport Battery Swapping Station Based on a Hybrid Modular Converter: Its Dynamic Control Strategy</h3>
+      <p class="authors">Chandan Kumar, Ibhan Chand Rath, Siba Kumar Patro, <strong>Vivek Kumar</strong></p>
+      <p class="venue">2024 IEEE Industry Applications Society Annual Meeting (IAS), pp. 1–7, 2024.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C7</div>
+    <div>
+      <h3>Cyber Threat Analysis and Design of IMC-PID Conventional Controller of PWM DC-DC Buck Converter (Part A) <span class="badge">Best Paper</span></h3>
+      <p class="authors">Anilkumar Badavath, <strong>Vivek Kumar</strong>, Yogesh V. Hote, Md Masood Raza</p>
+      <p class="venue">2023 IEEE International Conference on Recent Advances in Systems Science and Engineering (RASSE), Kerala, India, 2023.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/RASSE60029.2023.10363463" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C8</div>
+    <div>
+      <h3>Analyzing and Mitigating of Time Delay Attack (TDA) by Using Fractional Filter Based IMC-PID with Smith Predictor</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">61st IEEE Conference on Decision and Control (CDC), Cancún, Mexico, pp. 3194–3199, 2022.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C9</div>
+    <div>
+      <h3>Analytical Series-PID Controller Design with Smith Predictor Approach for Analyzing and Mitigating the Time Delay Cyber-Attack (TDCA)</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">2022 IEEE International Conference on Power Electronics, Drives and Energy Systems (PEDES), MNIT Jaipur, India, pp. 1–5, 2022.</p>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C10</div>
+    <div>
+      <h3>Controller Design Based on Fractional Filter with IMC-PID: Application to Servo System and Single Area Power System</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, Yogesh V. Hote</p>
+      <p class="venue">2022 IEEE 1st Industrial Electronics Society Annual On-Line Conference (ONCON), pp. 1–6, 2022.</p>
+    </div>
+  </article>
+  <article class="pub">
+    <div class="num">C11</div>
+    <div>
+      <h3>Modelling and Control of a Nonlinear Distillation Column: A, Using Fractional-Order Controllers</h3>
+      <p class="authors">Omar Hanif, Shipra Tiwari, <strong>Vivek Kumar</strong></p>
+      <p class="venue">2021 IEEE 18th India Council International Conference (INDICON), 2021.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/INDICON52576.2021.9691748" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iyLbGngAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=iyLbGngAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">C12</div>
+    <div>
+      <h3>Fragility Evaluation of Integer Order Controller under Process and Controller Parametric Uncertainties</h3>
+      <p class="authors">Ranganayakulu Rayalla, <strong>Vivek Kumar Tripathi</strong>, Uday Bhaskar Babu Gara</p>
+      <p class="venue">2020 International Conference on Power, Instrumentation, Control and Computing (PICC), 2020.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1109/PICC51425.2020.9362478" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iyLbGngAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=iyLbGngAAAAJ:u5HHmVD_uO8C" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- =========================================================
+     3. BOOK CHAPTERS
+========================================================= -->
+<section id="books" class="pub-section">
+  <div class="section-title">
+    <h2>3. Book Chapters</h2>
+    <span class="count">2 entries</span>
+  </div>
+  <div class="section-rule"></div>
+
+  <article class="pub">
+    <div class="num">B1</div>
+    <div>
+      <h3>Robust IMC-Based Integer and Fractional Filter PID Controller Design for Non-minimum Phase Systems</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, R. Ranganayakulu, G. Uday Bhaskar Babu, Palash Dahake</p>
+      <p class="venue"><em>Emerging Electronics and Automation</em>, Lecture Notes in Electrical Engineering, Springer, pp. 91–104, 2024.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1007/978-981-99-6855-8_8" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iyLbGngAAAAJ&sortby=pubdate&citation_for_view=iyLbGngAAAAJ:W7OEmFMy1HYC" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="pub">
+    <div class="num">B2</div>
+    <div>
+      <h3>Analytical Design of IMC-Based PID Controller for Non-minimum Phase Process with Time Delay</h3>
+      <p class="authors"><strong>Vivek Kumar</strong>, R. Ranganayakulu, G. Uday Bhaskar Babu</p>
+      <p class="venue"><em>Control Applications in Modern Power Systems</em>, Lecture Notes in Electrical Engineering, Springer, pp. 499–511, 2022.</p>
+      <div class="links">
+        <a href="https://doi.org/10.1007/978-981-19-0193-5_39" target="_blank" rel="noopener noreferrer">DOI ↗</a>
+        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iyLbGngAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=iyLbGngAAAAJ:Tyk-4Ss8FVUC" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+</div>
+</main>
+
+<footer class="footer">
+  © Vivek Kumar · Hosted free with GitHub Pages
+</footer>
+
+</body>
+</html>
