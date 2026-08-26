@@ -301,6 +301,137 @@ a:hover{text-decoration:underline}
   text-align:center;
 }
 
+
+/* =========================
+   CONFERENCE GALLERY
+========================= */
+
+.conference-section{
+  margin-top:70px;
+  padding-top:10px;
+}
+
+.conference-heading{
+  text-align:center;
+  margin-bottom:36px;
+}
+
+.conference-heading h2{
+  margin:0 0 10px;
+  font-size:38px;
+  font-weight:400;
+  color:#173a5d;
+}
+
+.conference-heading p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  color:#627787;
+}
+
+.conference-event{
+  background:#f8fdff;
+  border:1px solid #cae0ed;
+  box-shadow:0 8px 24px rgba(34,75,110,.06);
+  padding:34px;
+}
+
+.event-top{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:start;
+  gap:30px;
+  margin-bottom:28px;
+}
+
+.event-title h3{
+  margin:0 0 10px;
+  font-size:28px;
+  line-height:1.35;
+  font-weight:400;
+  color:#173a5d;
+}
+
+.event-title p{
+  margin:5px 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  line-height:1.65;
+  color:#556c7d;
+}
+
+.event-badge{
+  background:#dff3ff;
+  border:1px solid #b9dbea;
+  color:#225f8d;
+  padding:8px 13px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  white-space:nowrap;
+  border-radius:18px;
+}
+
+.photo-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.photo-gallery a{
+  display:block;
+  overflow:hidden;
+  border:1px solid #c7dfea;
+  background:#fff;
+  box-shadow:0 5px 15px rgba(34,75,110,.05);
+}
+
+.photo-gallery img{
+  display:block;
+  width:100%;
+  height:390px;
+  object-fit:cover;
+  transition:transform .25s ease;
+}
+
+.photo-gallery a:hover img{
+  transform:scale(1.015);
+}
+
+.gallery-caption{
+  margin-top:18px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color:#71818d;
+  text-align:center;
+}
+
+@media(max-width:800px){
+  .event-top{
+    grid-template-columns:1fr;
+  }
+
+  .event-badge{
+    justify-self:start;
+  }
+
+  .photo-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .photo-gallery img{
+    height:auto;
+  }
+
+  .conference-event{
+    padding:22px;
+  }
+
+  .conference-heading h2{
+    font-size:32px;
+  }
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -453,7 +584,7 @@ a:hover{text-decoration:underline}
       <article class="engagement-card">
         <div class="photo-art"></div>
         <div class="card-content">
-          <h2>Conferences</h2>
+          <h2><a href="#conferences" style="color:inherit;">Conferences</a></h2>
           <p>
             Moments from national and international conferences, technical presentations,
             research interactions, and academic networking.
@@ -488,9 +619,58 @@ a:hover{text-decoration:underline}
     </div>
 
 
-    <div class="gallery-note">
-      Photographs can be added under each category as your gallery develops.
-    </div>
+    <section id="conferences" class="conference-section">
+
+      <div class="conference-heading">
+        <h2>Conferences</h2>
+        <p>Selected moments from conferences attended during my academic journey.</p>
+      </div>
+
+      <article class="conference-event">
+
+        <div class="event-top">
+
+          <div class="event-title">
+            <h3>The 15th Asian Control Conference (ASCC 2026)</h3>
+            <p><strong>Date:</strong> June 17–21, 2026</p>
+            <p><strong>Venue:</strong> Grand Hyatt Bali, Nusa Dua, Bali, Indonesia</p>
+            <p>
+              Participated in ASCC 2026, an international forum bringing together researchers
+              and professionals in systems, control, automation, and related areas.
+            </p>
+          </div>
+
+          <div class="event-badge">ASCC 2026 · Bali, Indonesia</div>
+
+        </div>
+
+        <div class="photo-gallery">
+
+          <a href="images/ascc2026-01.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="images/ascc2026-01.jpg" alt="ASCC 2026 conference photograph 1">
+          </a>
+
+          <a href="images/ascc2026-02.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="images/ascc2026-02.jpg" alt="ASCC 2026 conference photograph 2">
+          </a>
+
+          <a href="images/ascc2026-03.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="images/ascc2026-03.jpg" alt="ASCC 2026 conference photograph 3">
+          </a>
+
+          <a href="images/ascc2026-04.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="images/ascc2026-04.jpg" alt="ASCC 2026 conference photograph 4">
+          </a>
+
+        </div>
+
+        <div class="gallery-caption">
+          Selected photographs from the 15th Asian Control Conference (ASCC 2026).
+        </div>
+
+      </article>
+
+    </section>
 
   </div>
 
