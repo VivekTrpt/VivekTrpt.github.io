@@ -1,22 +1,697 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CV | Vivek Kumar</title><style>
-:root{--sky:#dff3ff;--sky2:#c9edff;--sky3:#a9def8;--ink:#111;--muted:#555;--line:#9fc6d9;--white:#fff;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Georgia,'Times New Roman',serif}a{color:#184fbe;text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(var(--max),calc(100% - 50px));margin:auto}
-/* top nav */
-.topbar{height:68px;background:var(--sky2);border-bottom:2px solid #fff;display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between;gap:32px}.brand{font-family:Arial,Helvetica,sans-serif;font-size:14px;background:#2f76c7;color:#fff;padding:4px 7px}.menu{display:flex;align-items:center;gap:24px;font-family:Arial,Helvetica,sans-serif;font-size:13px}.menu a{color:#111}.menu a.active{font-weight:700}.menu .exp{position:relative}.submenu{display:none;position:absolute;top:20px;left:-14px;background:#fff;border:1px solid var(--line);min-width:190px;padding:7px;z-index:20;box-shadow:0 8px 20px rgba(0,0,0,.08)}.submenu a{display:block;padding:7px 8px}.exp:hover .submenu{display:block}
-/* home hero like reference */
-.name-banner{height:220px;background:linear-gradient(135deg,var(--sky3) 0 35%,var(--sky2) 35% 63%,var(--sky) 63% 100%);position:relative;overflow:hidden}.name-banner:after{content:'';position:absolute;width:700px;height:250px;right:-100px;top:-110px;border:45px solid rgba(255,255,255,.28);transform:rotate(-14deg)}.name-grid{height:100%;display:grid;grid-template-columns:430px 1fr;align-items:center}.name-grid h1{grid-column:2;font-size:58px;font-weight:400;margin:0;color:#183244;position:relative;z-index:2}
-.profile-block{position:relative;background:#fff;min-height:350px}.profile-grid{display:grid;grid-template-columns:430px 1fr;gap:70px}.photo-box{width:370px;height:365px;margin-top:-128px;background:#e9f6fc;border:1px solid #b7d5e3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.photo-box:before{content:'';width:155px;height:155px;border-radius:50%;background:#fff;position:absolute;top:48px;left:107px;border:1px solid #bfd9e4}.photo-box:after{content:'';width:260px;height:220px;border-radius:50% 50% 0 0;background:#fff;position:absolute;bottom:-75px;left:55px;border:1px solid #bfd9e4}.photo-label{position:relative;z-index:3;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#527182;margin-top:250px}.bio{padding:36px 0 55px}.bio h2{font-size:31px;font-weight:400;margin:0 0 14px}.bio .sub{font-size:23px;line-height:1.55;margin-bottom:36px}.bio .aff{font-size:17px;line-height:1.65;margin-bottom:24px}.scholar{font-size:17px;display:inline-flex;align-items:center;gap:10px}.scholar .cap{font-size:28px;color:#4e8ee8}
-/* supervisor band */
-.supervisor{background:linear-gradient(150deg,var(--sky2),var(--sky3));min-height:285px;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden}.supervisor:after{content:'';position:absolute;width:800px;height:300px;left:35%;top:40px;border-radius:50%;border:70px solid rgba(255,255,255,.22);transform:rotate(12deg)}.supervisor .inner{position:relative;z-index:2}.supervisor .label{font-size:31px;margin-bottom:38px}.supervisor h2{font-size:36px;font-weight:400;margin:0 0 12px}.supervisor p{font-size:17px;margin:0}.about-btn{display:inline-block;margin-top:35px;background:#376479;color:#fff;padding:12px 48px;font-family:Arial,Helvetica,sans-serif;font-size:13px}.about-btn:hover{text-decoration:none;background:#2b556b}
-/* research strip */
-.research-area{padding:95px 0 100px;background:#fff}.research-area h2{font-size:48px;font-weight:400;margin:0 0 80px}.research-grid{display:grid;grid-template-columns:repeat(5,1fr)}.research-item{min-height:105px;border-left:1px solid #888;display:flex;align-items:center;justify-content:center;text-align:center;font-size:26px;line-height:1.4;padding:10px 25px}.research-item:last-child{border-right:1px solid #888}
-/* contact band */
-.contact-band{background:linear-gradient(125deg,#b9e6fb,#dff3ff);padding:50px 0 62px;position:relative;overflow:hidden}.contact-band:after{content:'';position:absolute;inset:0;background:linear-gradient(30deg,transparent 0 45%,rgba(255,255,255,.35) 45% 53%,transparent 53%);pointer-events:none}.contact-band h2{text-align:center;font-size:42px;font-weight:400;margin:0 0 45px}.contact-info{position:relative;z-index:2;display:grid;grid-template-columns:1.4fr 1fr;gap:50px;font-family:Georgia,'Times New Roman',serif;font-size:14px}.contact-info .line{margin:18px 0}.ico{display:inline-block;width:45px;text-align:center;font-size:20px}.footer{background:#fff;padding:14px 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;text-align:center;color:#666}
-/* inner pages */
-.page-hero{background:linear-gradient(135deg,var(--sky2),var(--sky));padding:65px 0}.page-hero h1{font-size:52px;font-weight:400;margin:0}.page{padding:65px 0 90px}.page h2{font-size:30px;font-weight:400;margin:35px 0 12px}.page p,.page li{font-size:17px;line-height:1.75}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.card{padding:28px;border:1px solid #b8d5e3;background:#f8fdff}.pub{padding:23px 0;border-top:1px solid #b8d5e3}.pub h3{font-size:22px;font-weight:400;margin:0 0 7px}.small{font-family:Arial,Helvetica,sans-serif;font-size:13px!important;color:#555}.cvbtn{display:inline-block;padding:12px 22px;background:#376479;color:#fff;font-family:Arial,Helvetica,sans-serif}
-@media(max-width:900px){.menu{gap:10px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}.name-grid,.profile-grid{grid-template-columns:1fr}.name-grid h1{grid-column:1;font-size:45px;text-align:center}.name-banner{height:170px}.photo-box{margin:-70px auto 0}.bio{text-align:center}.research-grid{grid-template-columns:1fr 1fr}.research-item{border-right:1px solid #888;border-bottom:1px solid #aaa}.contact-info{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
-@media(max-width:600px){.wrap{width:min(var(--max),calc(100% - 28px))}.topbar{height:auto;padding:12px 0}.nav{align-items:flex-start}.menu{display:grid;grid-template-columns:repeat(3,auto);gap:8px 12px}.photo-box{width:300px;height:330px}.research-grid{grid-template-columns:1fr}.research-item{border-right:1px solid #888}.research-area h2{font-size:38px}.name-grid h1{font-size:39px}.bio .sub{font-size:19px}.page-hero h1{font-size:42px}}
-</style></head><body><header class="topbar"><div class="wrap nav"><a class="brand" href="index.html">Vivek Kumar</a><nav class="menu">
-<a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a>
-<div class="exp"><a href="experience.html">Experiences</a><div class="submenu"><a href="experience.html">Research Experience</a><a href="internship-project.html">Internship and Project</a><a href="teaching-experience.html">Teaching Experience</a></div></div>
-<a href="cv.html">CV</a><a href="photography.html">Photography</a><a href="contact.html">Contact</a></nav></div></header><section class="page-hero"><div class="wrap"><h1>CV</h1></div></section><main class="page"><div class="wrap"><p>This page can contain a short academic CV and a downloadable PDF.</p><p><span class="cvbtn">Add CV PDF later</span></p><h2>Research Interests</h2><p>Control systems · Cyber-physical systems · Power systems · Microgrids · Load-frequency control · Resilient control</p></div></main><footer class="footer">© Vivek Kumar · Hosted free with GitHub Pages</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CV | Vivek Kumar</title>
+
+<style>
+:root{
+  --sky:#dff3ff;
+  --sky2:#c9edff;
+  --sky3:#a9def8;
+  --ink:#172b43;
+  --muted:#5d6d7a;
+  --line:#b8d5e3;
+  --blue:#2f76c7;
+  --deep:#173a63;
+  --white:#ffffff;
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+}
+a{color:#184fbe;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(var(--max),calc(100% - 50px));margin:auto}
+
+/* NAVIGATION */
+.topbar{
+  min-height:68px;
+  background:var(--sky2);
+  border-bottom:2px solid #fff;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:50;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+}
+.brand{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  background:var(--blue);
+  color:#fff;
+  padding:5px 8px;
+}
+.menu{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+}
+.menu a{color:#111;position:relative}
+.menu a.active{font-weight:700;color:#1f5d97}
+.menu a.active:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-10px;
+  height:2px;
+  background:var(--blue);
+}
+.exp{position:relative}
+.submenu{
+  display:none;
+  position:absolute;
+  top:20px;left:-14px;
+  background:#fff;
+  border:1px solid var(--line);
+  min-width:205px;
+  padding:7px;
+  z-index:60;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.submenu a{display:block;padding:7px 8px}
+.exp:hover .submenu{display:block}
+
+/* HERO */
+.page-hero{
+  background:
+    linear-gradient(135deg,rgba(169,222,248,.97),rgba(223,243,255,.98)),
+    radial-gradient(circle at 80% 20%,rgba(255,255,255,.85),transparent 34%);
+  padding:74px 0 62px;
+  position:relative;
+  overflow:hidden;
+}
+.page-hero:after{
+  content:"";
+  position:absolute;
+  width:760px;height:250px;
+  right:-130px;top:-110px;
+  border:48px solid rgba(255,255,255,.27);
+  border-radius:50%;
+  transform:rotate(-12deg);
+}
+.hero-content{position:relative;z-index:2}
+.page-hero h1{
+  margin:0 0 10px;
+  font-size:56px;
+  font-weight:400;
+  color:#17364f;
+}
+.page-hero p{
+  margin:0;
+  max-width:780px;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#426079;
+  font-size:14px;
+  line-height:1.75;
+}
+
+/* PAGE */
+.cv-page{
+  padding:64px 0 92px;
+  background:#fff;
+}
+.profile-strip{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:28px;
+  margin-bottom:38px;
+}
+.profile-card,
+.quick-card{
+  border:1px solid #c8dfed;
+  background:#f8fdff;
+  padding:30px;
+}
+.profile-card h2{
+  margin:0 0 12px;
+  font-size:31px;
+  font-weight:400;
+  color:#173a5d;
+}
+.profile-card p{
+  margin:0;
+  font-size:16px;
+  line-height:1.8;
+  color:#334b5f;
+}
+.quick-card h3{
+  margin:0 0 14px;
+  font-size:22px;
+  font-weight:400;
+  color:#173a5d;
+}
+.quick-card p{
+  margin:7px 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  color:#506778;
+  line-height:1.6;
+}
+
+/* SECTION */
+.cv-section{
+  margin-top:48px;
+}
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:20px;
+}
+.section-title h2{
+  margin:0;
+  font-size:32px;
+  font-weight:400;
+  color:#173a5d;
+}
+.section-line{
+  height:1px;
+  flex:1;
+  background:linear-gradient(to right,#9fc6d9,transparent);
+}
+
+/* EDUCATION */
+.timeline{
+  position:relative;
+  margin-left:8px;
+}
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:138px;
+  top:5px;
+  bottom:5px;
+  width:1px;
+  background:#a9c4d5;
+}
+.edu-item{
+  display:grid;
+  grid-template-columns:110px 28px 1fr;
+  gap:18px;
+  margin-bottom:30px;
+}
+.edu-year{
+  text-align:right;
+  padding-top:4px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  color:#2f76c7;
+}
+.edu-dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#2f76c7;
+  margin-top:7px;
+  position:relative;
+  z-index:2;
+  box-shadow:0 0 0 4px #eff8ff;
+}
+.edu-content h3{
+  margin:0 0 6px;
+  font-size:21px;
+  font-weight:400;
+  color:#173a5d;
+}
+.edu-content p{
+  margin:3px 0;
+  font-size:15px;
+  line-height:1.65;
+  color:#334b5f;
+}
+
+/* SKILLS */
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.skill-card{
+  border:1px solid #cde2ee;
+  background:#f8fdff;
+  padding:22px 24px;
+}
+.skill-card h3{
+  margin:0 0 8px;
+  font-size:20px;
+  font-weight:400;
+  color:#173a5d;
+}
+.skill-card p{
+  margin:0;
+  font-size:15px;
+  line-height:1.7;
+  color:#3c5365;
+}
+
+/* LIST SECTIONS */
+.clean-list{
+  margin:0;
+  padding-left:22px;
+}
+.clean-list li{
+  margin-bottom:13px;
+  font-size:16px;
+  line-height:1.7;
+  color:#334b5f;
+}
+.item-list{
+  display:grid;
+  gap:15px;
+}
+.item{
+  padding:19px 22px;
+  border-left:3px solid #8cc8e6;
+  background:#f8fdff;
+}
+.item h3{
+  margin:0 0 5px;
+  font-size:19px;
+  font-weight:400;
+  color:#173a5d;
+}
+.item p{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  color:#5d7180;
+  line-height:1.6;
+}
+
+/* LINKS */
+.profile-links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:17px;
+}
+.profile-links a{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  border:1px solid #b8d8ea;
+  background:#fff;
+  color:#236aa3;
+  padding:7px 11px;
+  border-radius:3px;
+}
+.profile-links a:hover{
+  background:#e9f7ff;
+  text-decoration:none;
+}
+
+.note{
+  margin-top:45px;
+  padding:18px 22px;
+  background:#f7fcff;
+  border:1px solid #d2e7f1;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color:#607483;
+  line-height:1.6;
+}
+
+/* FOOTER */
+.footer{
+  background:#f6fbff;
+  border-top:1px solid #dceaf3;
+  padding:18px 0;
+  text-align:center;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  color:#667784;
+}
+
+@media(max-width:900px){
+  .menu{gap:10px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}
+  .profile-strip{grid-template-columns:1fr}
+  .skill-grid{grid-template-columns:1fr}
+  .page-hero h1{font-size:46px}
+}
+@media(max-width:600px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}
+  .topbar{padding:12px 0}
+  .nav{align-items:flex-start;flex-direction:column;gap:12px}
+  .menu{display:grid;grid-template-columns:repeat(3,auto);gap:8px 12px}
+  .page-hero{padding:48px 0 42px}
+  .page-hero h1{font-size:40px}
+  .timeline:before{left:8px}
+  .edu-item{display:block;padding-left:28px;position:relative}
+  .edu-year{text-align:left;margin-bottom:6px}
+  .edu-dot{position:absolute;left:2px;top:2px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Vivek Kumar</a>
+
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+
+      <div class="exp">
+        <a href="experience.html">Experiences</a>
+        <div class="submenu">
+          <a href="research.html">Research Experience</a>
+          <a href="internship-project.html">Projects and Internships</a>
+          <a href="teaching-experience.html">Teaching Experience</a>
+        </div>
+      </div>
+
+      <a class="active" href="cv.html">CV</a>
+      <a href="photography.html">Academic &amp; Industry Engagements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap hero-content">
+    <h1>Curriculum Vitae</h1>
+    <p>
+      Academic profile highlighting my research interests, education, technical expertise,
+      research projects, teaching experience, industrial training, achievements, and professional activities.
+    </p>
+  </div>
+</section>
+
+<main class="cv-page">
+  <div class="wrap">
+
+    <section class="profile-strip">
+
+      <div class="profile-card">
+        <h2>Vivek Kumar</h2>
+        <p>
+          Ph.D. Researcher (Senior Research Fellow), Department of Electrical Engineering,
+          Indian Institute of Technology Roorkee. My research is centered on control systems,
+          cyber-physical systems, power-system applications, microgrids, and resilient control,
+          with particular emphasis on the analysis and mitigation of cyber-attacks.
+        </p>
+
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=iyLbGngAAAAJ&hl=en"
+             target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+
+          <a href="https://orcid.org/0000-0003-2260-4799"
+             target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+
+          <a href="publications.html">Publications</a>
+        </div>
+      </div>
+
+      <div class="quick-card">
+        <h3>Academic Profile</h3>
+        <p><strong>Department:</strong> Electrical Engineering</p>
+        <p><strong>Institution:</strong> Indian Institute of Technology Roorkee</p>
+        <p><strong>Specialization:</strong> Systems and Control</p>
+        <p><strong>Research Focus:</strong> Control, CPS Security, Power Systems &amp; Microgrids</p>
+      </div>
+
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Research Interests</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <p style="font-size:16px;line-height:1.85;color:#334b5f;margin:0;">
+        Advanced and conventional control-system design, including PID and its variants,
+        fractional-order PID control, Internal Model Control (IMC), frequency-shifted IMC,
+        Smith predictor-based control, and Active Disturbance Rejection Control (ADRC).
+        My work also includes process control, power-system applications, dynamic-system modelling,
+        and resilience analysis of cyber-physical systems under cyber-attacks such as time-delay,
+        false-data-injection, scaling, and Man-in-the-Middle attacks.
+      </p>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="edu-item">
+          <div class="edu-year">2021–2026</div>
+          <div class="edu-dot"></div>
+          <div class="edu-content">
+            <h3>Ph.D. (Systems and Control)</h3>
+            <p>Indian Institute of Technology Roorkee, Uttarakhand, India</p>
+            <p><strong>CGPA:</strong> 8.33/10</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-year">2019–2021</div>
+          <div class="edu-dot"></div>
+          <div class="edu-content">
+            <h3>M.Tech. (Process Control)</h3>
+            <p>National Institute of Technology Warangal, Telangana, India</p>
+            <p><strong>CGPA:</strong> 8.63/10</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-year">2013–2017</div>
+          <div class="edu-dot"></div>
+          <div class="edu-content">
+            <h3>B.Tech. (Electronics &amp; Instrumentation)</h3>
+            <p>Krishna Institute of Engineering &amp; Technology, Ghaziabad, Uttar Pradesh, India</p>
+            <p>Dr. A.P.J. Abdul Kalam Technical University, Lucknow</p>
+            <p><strong>Percentage:</strong> 79.02%</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skill-grid">
+
+        <div class="skill-card">
+          <h3>Control-System Design</h3>
+          <p>PID, fractional PID, PID variants, Internal Model Control, Smith predictor-based control, ADRC, and related advanced control methods.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Cyber-Physical Systems</h3>
+          <p>Cyber-attack analysis, resilient control, and mitigation strategies for power-system and microgrid applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Software</h3>
+          <p>MATLAB, Simulink, and related modelling and simulation tools.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Real-Time / Prototype Implementation</h3>
+          <p>Prototype implementation and Software-in-the-Loop (SIL) studies using OPAL-RT.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Research &amp; Academic Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="item-list">
+
+        <div class="item">
+          <h3>Adaptive Robust Control of Feedback Systems for Cybersecurity</h3>
+          <p>April 2026 – Present</p>
+        </div>
+
+        <div class="item">
+          <h3>Cybersecurity Analysis of Networked Microgrid</h3>
+          <p>2025 – Present</p>
+        </div>
+
+        <div class="item">
+          <h3>Mitigation of Cyber-Attacks in Power Systems using Non-Linear Control System Design</h3>
+          <p>2021 – 2025</p>
+        </div>
+
+        <div class="item">
+          <h3>S.B. PID Control Approach for AGC of Power Systems with Integration of RESs</h3>
+          <p>2022 – 2025</p>
+        </div>
+
+        <div class="item">
+          <h3>M.Tech. Project: Fractional Filter IMC-PID Controller Design</h3>
+          <p>Minimum- and non-minimum-phase systems and unstable systems using optimization techniques · August 2020 – May 2021</p>
+        </div>
+
+        <div class="item">
+          <h3>B.Tech. Project: Automatic Can Filling using PLC</h3>
+          <p>RSLogix 500-based PLC implementation · January 2017 – May 2017</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Teaching Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <ul class="clean-list">
+        <li>
+          Teaching Assistant for the NPTEL course
+          <em>Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink</em>
+          for four consecutive years (2023–2026).
+        </li>
+        <li>
+          Teaching-assistant responsibilities at IIT Roorkee included instructional support,
+          laboratory assistance, and mentoring of undergraduate and postgraduate students.
+        </li>
+        <li>
+          Teaching Assistant with the Continuing Education Centre, IIT Roorkee,
+          and Protecon, Greater Noida, on 16–17 March 2024.
+        </li>
+      </ul>
+
+      <div class="profile-links">
+        <a href="teaching-experience.html">View Detailed Teaching Experience</a>
+      </div>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Industrial Training</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <ul class="clean-list">
+        <li><strong>PLC &amp; SCADA Training</strong> — Sofcon India Pvt. Ltd. (8–19 June 2015)</li>
+        <li><strong>Instrumentation and Calibration of RTD &amp; Thermocouple</strong> — BHEL, Haridwar (11 June–25 July 2016)</li>
+        <li><strong>Skill Development Programme on Coal-Based Power Generation</strong> — NPTI (14–16 September 2016)</li>
+        <li><strong>Power Plant Familiarization</strong> — Adani Dahanu Thermal Power Station, Mumbai (28–29 July 2023)</li>
+      </ul>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Achievements</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <ul class="clean-list">
+        <li>Recognized by IIT Roorkee for publications in high-impact journals.</li>
+        <li>Received MHRD scholarship during the M.Tech. and Ph.D. programmes.</li>
+        <li>Qualified GATE in Instrumentation Engineering with AIR 328 (2019), 647 (2020), and 1627 (2018).</li>
+        <li>Received the Best Paper Award at RASSE 2023.</li>
+      </ul>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Professional &amp; Co-Curricular Activities</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <ul class="clean-list">
+        <li>
+          Reviewer for journals and conferences including IEEE Transactions on Systems, Man, and Cybernetics: Systems,
+          ISA Transactions, International Journal of Systems Science, International Journal of Dynamics and Control,
+          ONCON, CERA, and PEDES.
+        </li>
+        <li>
+          Conferences attended include ASCC 2026, PEDES 2024 &amp; 2022, ONCON 2022, EPREC 2021, and INDICON 2021.
+        </li>
+        <li>
+          Workshops and technical events attended include the Symposium on Fractional Order System (FOS-25),
+          C3iHub's Conference on Emerging Trends in Cybersecurity (CCETC-2024), and the Indo-French Seminar on
+          Advances in Robust Nonlinear Control for Uncertain Dynamic Systems.
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="cv-section">
+      <div class="section-title">
+        <h2>Selected Publications</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <ul class="clean-list">
+        <li>
+          <strong>New FFIMMC Control Design for the Detection &amp; Mitigation of Hybrid Cyber Threats</strong>,
+          IEEE Transactions on Industrial Electronics, 2026.
+        </li>
+        <li>
+          <strong>Frequency Relocated PIDAFF Control Scheme for LFC in Microgrid Amid Multiple Cyber Threats</strong>,
+          IEEE Transactions on Industry Applications, 2026.
+        </li>
+        <li>
+          <strong>New Approach of Switching Based Modified Nonlinear ADRC Strategy for Detection and Mitigation of Cyber Threats</strong>,
+          IEEE Transactions on Industry Applications, 2026.
+        </li>
+        <li>
+          <strong>Robust Fractional Order Control Design for LFC in Interconnected Power Systems with RESs</strong>,
+          International Journal of Systems Science, 2026.
+        </li>
+        <li>
+          <strong>Robust Triple-Parametric Fractional Control Strategy for Frequency Regulation Against Cyber Threats</strong>,
+          The 15th Asian Control Conference (ASCC), Bali, Indonesia, 2026.
+        </li>
+      </ul>
+
+      <div class="profile-links">
+        <a href="publications.html">View Complete Publications</a>
+      </div>
+    </section>
+
+
+    <div class="note">
+      This web CV is presented as an academic profile page. No downloadable CV file has been added.
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  © Vivek Kumar · Hosted free with GitHub Pages
+</footer>
+
+</body>
+</html>
