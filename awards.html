@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Awards &amp; Achievements | Vivek Kumar</title>
+
+<style>
+:root{
+  --sky:#dff3ff;
+  --sky2:#c9edff;
+  --sky3:#a9def8;
+  --ink:#172b43;
+  --muted:#5d6d7a;
+  --line:#b8d5e3;
+  --blue:#2f76c7;
+  --deep:#173a63;
+  --white:#ffffff;
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  color:var(--ink);
+  background:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+}
+
+a{
+  color:#184fbe;
+  text-decoration:none;
+}
+
+a:hover{text-decoration:underline}
+
+.wrap{
+  width:min(var(--max),calc(100% - 50px));
+  margin:auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.topbar{
+  min-height:68px;
+  background:var(--sky2);
+  border-bottom:2px solid #fff;
+  display:flex;
+  align-items:center;
+  position:relative;
+  z-index:50;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.brand{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  background:var(--blue);
+  color:#fff;
+  padding:5px 8px;
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap:19px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+}
+
+.menu a{
+  color:#111;
+  position:relative;
+}
+
+.menu a.active{
+  font-weight:700;
+  color:#1f5d97;
+}
+
+.menu a.active:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-10px;
+  height:2px;
+  background:var(--blue);
+}
+
+.exp{
+  position:relative;
+}
+
+.submenu{
+  display:none;
+  position:absolute;
+  top:20px;
+  left:-14px;
+  background:#fff;
+  border:1px solid var(--line);
+  min-width:210px;
+  padding:7px;
+  z-index:60;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.submenu a{
+  display:block;
+  padding:7px 8px;
+}
+
+.exp:hover .submenu{
+  display:block;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.page-hero{
+  background:
+    linear-gradient(135deg,rgba(169,222,248,.97),rgba(223,243,255,.98)),
+    radial-gradient(circle at 80% 20%,rgba(255,255,255,.85),transparent 34%);
+  padding:74px 0 62px;
+  position:relative;
+  overflow:hidden;
+}
+
+.page-hero:after{
+  content:"";
+  position:absolute;
+  width:760px;
+  height:250px;
+  right:-130px;
+  top:-110px;
+  border:48px solid rgba(255,255,255,.27);
+  border-radius:50%;
+  transform:rotate(-12deg);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.page-hero h1{
+  margin:0 0 10px;
+  font-size:54px;
+  font-weight:400;
+  color:#17364f;
+}
+
+.page-hero p{
+  margin:0;
+  max-width:760px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;
+  line-height:1.75;
+  color:#426079;
+}
+
+/* =========================
+   PAGE CONTENT
+========================= */
+
+.page{
+  padding:65px 0 90px;
+}
+
+.intro{
+  max-width:850px;
+  margin:0 auto 48px;
+  text-align:center;
+}
+
+.intro p{
+  margin:0;
+  font-size:17px;
+  line-height:1.85;
+  color:#40576a;
+}
+
+/* =========================
+   AWARDS GRID
+========================= */
+
+.awards-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:26px;
+}
+
+.award-card{
+  position:relative;
+  overflow:hidden;
+  min-height:245px;
+  padding:30px 30px 28px;
+  background:#f8fdff;
+  border:1px solid #c8dfed;
+  box-shadow:0 8px 24px rgba(34,75,110,.06);
+}
+
+.award-card:before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  right:-45px;
+  top:-45px;
+  border:28px solid rgba(86,161,209,.10);
+}
+
+.award-card .icon{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#dff3ff;
+  border:1px solid #b8d8ea;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  margin-bottom:20px;
+  position:relative;
+  z-index:2;
+}
+
+.award-card h2{
+  margin:0 0 9px;
+  font-size:25px;
+  font-weight:400;
+  color:#173a5d;
+  position:relative;
+  z-index:2;
+}
+
+.award-card .meta{
+  margin:0 0 10px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  color:#2f76c7;
+  position:relative;
+  z-index:2;
+}
+
+.award-card p{
+  margin:0;
+  font-size:15px;
+  line-height:1.72;
+  color:#3d5365;
+  position:relative;
+  z-index:2;
+}
+
+/* =========================
+   GATE SECTION
+========================= */
+
+.gate-table{
+  margin-top:48px;
+  border:1px solid #c8dfed;
+  background:#fff;
+}
+
+.gate-title{
+  padding:22px 26px;
+  background:#eef9ff;
+  border-bottom:1px solid #c8dfed;
+}
+
+.gate-title h2{
+  margin:0;
+  font-size:27px;
+  font-weight:400;
+  color:#173a5d;
+}
+
+.gate-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+.gate-cell{
+  padding:22px 18px;
+  text-align:center;
+  border-right:1px solid #d7e8f2;
+}
+
+.gate-cell:last-child{
+  border-right:none;
+}
+
+.gate-year{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  color:#2f76c7;
+  margin-bottom:7px;
+}
+
+.gate-rank{
+  font-size:24px;
+  color:#173a5d;
+  margin-bottom:5px;
+}
+
+.gate-label{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color:#6b7d8a;
+}
+
+
+/* =========================
+   RECOGNITION GALLERY
+========================= */
+
+.recognition-section{
+  margin-top:52px;
+}
+
+.recognition-box{
+  border:1px solid #c8dfed;
+  background:#f8fdff;
+  padding:32px;
+  box-shadow:0 8px 24px rgba(34,75,110,.06);
+}
+
+.recognition-box h2{
+  margin:0 0 10px;
+  font-size:32px;
+  font-weight:400;
+  color:#173a5d;
+}
+
+.recognition-box .meta{
+  margin:0 0 16px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  font-weight:700;
+  color:#2f76c7;
+}
+
+.recognition-box p{
+  margin:0 0 20px;
+  font-size:16px;
+  line-height:1.78;
+  color:#40576a;
+}
+
+.recognition-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.recognition-gallery a{
+  display:block;
+  overflow:hidden;
+  border:1px solid #c7dfea;
+  background:#fff;
+  box-shadow:0 5px 15px rgba(34,75,110,.05);
+}
+
+.recognition-gallery img{
+  display:block;
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  transition:transform .25s ease;
+}
+
+.recognition-gallery a:hover img{
+  transform:scale(1.015);
+}
+
+.recognition-gallery a.wide{
+  grid-column:1 / -1;
+}
+
+.recognition-gallery a.wide img{
+  height:auto;
+  object-fit:contain;
+  background:#fff;
+}
+
+.gallery-caption{
+  margin-top:18px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color:#71818d;
+  text-align:center;
+}
+
+@media(max-width:700px){
+  .recognition-gallery{
+    grid-template-columns:1fr;
+  }
+  .recognition-gallery img{
+    height:auto;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  background:#f6fbff;
+  border-top:1px solid #dceaf3;
+  padding:18px 0;
+  text-align:center;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  color:#667784;
+}
+
+@media(max-width:950px){
+
+  .menu{
+    gap:10px;
+    font-size:11px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  .awards-grid{
+    grid-template-columns:1fr;
+  }
+
+  .page-hero h1{
+    font-size:46px;
+  }
+}
+
+@media(max-width:650px){
+
+  .wrap{
+    width:min(var(--max),calc(100% - 28px));
+  }
+
+  .topbar{
+    padding:12px 0;
+  }
+
+  .nav{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .menu{
+    display:grid;
+    grid-template-columns:repeat(3,auto);
+    gap:8px 12px;
+  }
+
+  .page-hero{
+    padding:48px 0 42px;
+  }
+
+  .page-hero h1{
+    font-size:38px;
+  }
+
+  .gate-row{
+    grid-template-columns:1fr;
+  }
+
+  .gate-cell{
+    border-right:none;
+    border-bottom:1px solid #d7e8f2;
+  }
+
+  .gate-cell:last-child{
+    border-bottom:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="wrap nav">
+
+    <a class="brand" href="index.html">Vivek Kumar</a>
+
+    <nav class="menu">
+
+      <a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="research.html">Research</a>
+
+      <a href="publications.html">Publications</a>
+
+      <a class="active" href="awards.html">Awards &amp; Achievements</a>
+
+      <div class="exp">
+        <a href="experience.html">Experiences</a>
+
+        <div class="submenu">
+          <a href="research.html">Research Experience</a>
+          <a href="internship-project.html">Projects and Internships</a>
+          <a href="teaching-experience.html">Teaching Experience</a>
+        </div>
+      </div>
+
+      <a href="cv.html">CV</a>
+
+      <a href="photography.html">Academic &amp; Industry Engagements</a>
+
+      <a href="contact.html">Contact</a>
+
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="page-hero">
+
+  <div class="wrap hero-content">
+
+    <h1>Awards &amp; Achievements</h1>
+
+    <p>
+      Selected academic recognitions, scholarships, competitive-examination achievements,
+      and conference awards received during my academic journey.
+    </p>
+
+  </div>
+
+</section>
+
+
+<main class="page">
+
+  <div class="wrap">
+
+    <div class="intro">
+
+      <p>
+        This section highlights selected recognitions and academic achievements that reflect
+        my research contributions, academic performance, and participation in competitive
+        examinations and scholarly activities.
+      </p>
+
+    </div>
+
+
+    <div class="awards-grid">
+
+      <article class="award-card">
+
+        <div class="icon">★</div>
+
+        <h2>Recognition for High-Impact Publications</h2>
+
+        <p class="meta">Indian Institute of Technology Roorkee</p>
+
+        <p>
+          Recognized by IIT Roorkee for research publications in high-impact journals. Selected photographs and the recognition letter are presented below.
+        </p>
+
+      </article>
+
+
+      <article class="award-card">
+
+        <div class="icon">◆</div>
+
+        <h2>MHRD Scholarship</h2>
+
+        <p class="meta">M.Tech. and Ph.D. Programmes</p>
+
+        <p>
+          Received the MHRD scholarship during the entire duration of the M.Tech.
+          and Ph.D. programmes.
+        </p>
+
+      </article>
+
+
+      <article class="award-card">
+
+        <div class="icon">🏆</div>
+
+        <h2>Best Paper Award</h2>
+
+        <p class="meta">RASSE 2023</p>
+
+        <p>
+          Received the Best Paper Award at the 2023 IEEE International Conference
+          on Recent Advances in Systems Science and Engineering (RASSE-2023).
+        </p>
+
+      </article>
+
+
+      <article class="award-card">
+
+        <div class="icon">✓</div>
+
+        <h2>GATE Qualification</h2>
+
+        <p class="meta">Instrumentation Engineering</p>
+
+        <p>
+          Qualified the Graduate Aptitude Test in Engineering (GATE) in Instrumentation
+          Engineering in multiple years with competitive All India Ranks.
+        </p>
+
+      </article>
+
+    </div>
+
+
+    
+    <section class="recognition-section">
+
+      <div class="recognition-box">
+
+        <h2>Recognition for High-Impact Publications</h2>
+
+        <p class="meta">Indian Institute of Technology Roorkee · July 2026</p>
+
+        <p>
+          This recognition was awarded for successful publication in high-impact journals
+          during my tenure at IIT Roorkee. The gallery below includes selected photographs
+          from the felicitation/recognition event as well as the official appreciation letter.
+        </p>
+
+        <div class="recognition-gallery">
+
+          <a href="images/high-impact-recognition-01.png" target="_blank" rel="noopener noreferrer">
+            <img src="images/high-impact-recognition-01.png" alt="Recognition ceremony photograph 1">
+          </a>
+
+          <a href="images/high-impact-recognition-02.png" target="_blank" rel="noopener noreferrer">
+            <img src="images/high-impact-recognition-02.png" alt="Recognition ceremony photograph 2">
+          </a>
+
+          <a href="images/high-impact-recognition-03.png" target="_blank" rel="noopener noreferrer">
+            <img src="images/high-impact-recognition-03.png" alt="Recognition ceremony photograph 3">
+          </a>
+
+          <a href="images/high-impact-recognition-04.png" target="_blank" rel="noopener noreferrer">
+            <img src="images/high-impact-recognition-04.png" alt="Recognition ceremony photograph 4">
+          </a>
+
+          <a class="wide" href="images/high-impact-recognition-letter.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="images/high-impact-recognition-letter.jpg" alt="Official recognition letter for high-impact publications">
+          </a>
+
+        </div>
+
+        <div class="gallery-caption">
+          Selected photographs and official recognition letter related to the high-impact publication recognition.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="gate-table">
+
+      <div class="gate-title">
+        <h2>GATE — Instrumentation Engineering</h2>
+      </div>
+
+      <div class="gate-row">
+
+        <div class="gate-cell">
+          <div class="gate-year">2019</div>
+          <div class="gate-rank">AIR 328</div>
+          <div class="gate-label">All India Rank</div>
+        </div>
+
+        <div class="gate-cell">
+          <div class="gate-year">2020</div>
+          <div class="gate-rank">AIR 647</div>
+          <div class="gate-label">All India Rank</div>
+        </div>
+
+        <div class="gate-cell">
+          <div class="gate-year">2018</div>
+          <div class="gate-rank">AIR 1627</div>
+          <div class="gate-label">All India Rank</div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer class="footer">
+
+  © Vivek Kumar · Hosted free with GitHub Pages
+
+</footer>
+
+</body>
+</html>
