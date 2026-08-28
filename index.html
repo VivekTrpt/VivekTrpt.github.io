@@ -47,10 +47,147 @@ header a {
     font-size: 17px !important;
     font-weight: 700 !important;
 }
-</style></head><body><header class="topbar"><div class="wrap nav"><a class="brand" href="index.html">Vivek Kumar</a><nav class="menu">
-<a href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a> <a href="awards.html">Awards &amp; Achievements</a>
-<div class="exp"><a href="experience.html">Experiences</a><div class="submenu"><a href="experience.html">Research Experience</a><a href="internship-project.html">Internship and Project</a><a href="teaching-experience.html">Teaching Experience</a></div></div>
-<a href="cv.html">CV</a><a href="photography.html">Photography</a><a href="contact.html">Contact</a></nav></div></header>
+
+
+/* =========================================================
+   IDENTICAL MAIN NAVIGATION ON EVERY PAGE
+   ========================================================= */
+.topbar {
+  width: 100% !important;
+  min-height: 76px !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: #c9edff !important;
+  border-bottom: 2px solid #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.topbar .nav {
+  width: min(1280px, calc(100% - 40px)) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+}
+
+.topbar .brand {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  background: #2f76c7 !important;
+  color: #ffffff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.topbar .menu {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 18px !important;
+  flex-wrap: nowrap !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.topbar .menu a,
+.topbar .menu a.active {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #111111 !important;
+  background: transparent !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.topbar .menu a::after,
+.topbar .menu a.active::after {
+  content: none !important;
+  display: none !important;
+}
+
+.topbar .menu a:hover,
+.topbar .menu a:focus-visible {
+  color: #1f5d97 !important;
+  text-decoration: underline !important;
+}
+
+@media (max-width: 1250px) {
+  .topbar {
+    padding: 14px 0 !important;
+  }
+
+  .topbar .nav {
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+
+  .topbar .menu {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px 18px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar .nav {
+    width: min(100% - 28px, 1280px) !important;
+    align-items: center !important;
+  }
+
+  .topbar .brand {
+    font-size: 22px !important;
+  }
+
+  .topbar .menu {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, auto)) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    column-gap: 18px !important;
+    row-gap: 11px !important;
+  }
+
+  .topbar .menu a,
+  .topbar .menu a.active {
+    font-size: 15px !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+</style></head><body><header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Vivek Kumar</a>
+    <nav class="menu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="awards.html">Awards &amp; Achievements</a>
+      <a href="experience.html">Experiences</a>
+      <a href="cv.html">CV</a>
+      <a href="photography.html">Academic &amp; Industry Engagements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 <section class="name-banner"><div class="wrap name-grid"><h1>Vivek Kumar</h1></div></section>
 <section class="profile-block"><div class="wrap profile-grid"><div class="photo-box">   <img src="My_Photo.png" alt="Vivek Kumar" style="width:100%; height:100%; object-fit:cover;"> </div><div class="bio"><h2>Ph.D. Thesis Submitted</h2><div class="sub">Electrical Engineering</div><div class="aff">Systems and Control Group<br>Department of Electrical Engineering<br>Indian Institute of Technology Roorkee</div><a class="scholar" href="https://scholar.google.com/citations?hl=en&user=iyLbGngAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><span class="cap">◆</span>Google Scholar</a></div></div></section>
 <section class="supervisor"><div class="wrap inner"><div class="label">Ph.D. Supervisor</div><h2>Prof. Yogesh V. Hote</h2><p>Professor, Department of Electrical Engineering<br>Indian Institute of Technology Roorkee</p><a class="about-btn" href="https://ee.iitr.ac.in/~EE/yhotefee" target="_blank" rel="noopener noreferrer">About</a></div></section>
